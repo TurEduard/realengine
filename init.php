@@ -3,9 +3,9 @@
 
 if ( !$config['version_id'] ) {
 	if (!file_exists(ROOT_DIR . '/data/config.php') ) {
-		header( "Location: ".str_replace(basename($_SERVER['PHP_SELF']),"admin.php",$_SERVER['PHP_SELF']) );
-		die ( "Engine not installed. Please login and run install in admin panel" );
-	} else die ( "Engine not installed. Please login and run install in admin panel" );
+		header( "Location: ".str_replace(basename($_SERVER['PHP_SELF']),"admin/setup-config",$_SERVER['PHP_SELF']) );
+		die ( "Engine not installed. Please login and run setup in admin panel" );
+	} else die ( "Engine not installed. Please login and run setup in admin panel" );
 }
 
 define( CLASS_DIR , ROOT_DIR . '/classes');
